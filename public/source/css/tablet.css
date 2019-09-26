@@ -1,0 +1,269 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a:hover{
+    text-decoration: none;
+}
+header{
+    height: auto;
+}
+.down{
+    margin-left: -50%;
+    margin-top:150px;
+}
+.fa-facebook-square{
+    color:#3b5998;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 2%;
+}
+.fa-twitter-square{
+    color: #38A1F3;
+    margin-top: 30px;
+    margin-right: 2%;
+}
+.fa-instagram{
+    color: #cd486b;
+    margin-top: 30px;
+    margin-right: 2%;
+}
+.fa-user{
+    margin-top: 30px;
+    color: #2B5973;
+    margin-left: 10%;
+}
+.login {
+    display: inline;
+    color:#2B5973;
+}
+.register{
+    display: inline;
+    color: #2B5973
+}
+.fa-shopping-bag{
+    margin-left: 30px;
+    color: #2B5973
+}
+.menu{
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: pink ! important; 
+}
+.col .section-title{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.col .section-title b {
+    display: block;
+    margin-left: 2%;
+    margin-right: 2%;
+    flex: 10;
+    height: 2px;
+    opacity: .3;
+    background-color: #2B5973;
+}
+.bggray{
+    height: 750px;
+    background-color: #F5F5F5;
+    color: #2B5973;
+}
+.row .col-3 span{
+    background: pink;
+    width: 100%;
+    margin-bottom: -20px;
+    
+}
+.row .image:hover{
+    border-radius: 50%;
+}
+.newtong{
+    height: 500px;
+}
+.newngang{
+    display: flex;
+    list-style-type: none;
+}
+.newtong .newngang li{
+    width: 24%;
+    margin-left: 1%;
+    margin-right: 1%;
+    transition: 0.4s;
+}
+.newtong .newngang li:hover{
+    margin-top: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+    cursor: pointer;
+}
+.newtong .newngang li span{
+    margin-left: 30%;
+}
+.bgwhite{
+    height: 400px;
+    background: #FEDCE2;
+}
+.col .slogan{
+    width: 30%;
+    margin-right: 3%;
+}
+h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+svg{
+    margin-left: 300%;
+}
+p{
+    color: #777;
+    text-align: center;
+}
+.pdtong{
+    height: 500px;
+}
+.pdngang{
+    display: flex;
+    list-style-type: none;
+}
+.pdtong .pdngang li{
+    width: 19%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+hr.short{
+    width: 90%;
+}
+.bdr{
+   border: 1px solid #7C584E;
+    border-top: none;
+    box-shadow: 4px 4px 4px 0px #FEDCE2;
+    transition: 0.6s;
+}
+.bdr:hover{
+    border: 1px solid #7C584E;
+    opacity: 0.6;
+     border-top: none;
+     box-shadow: 7px 7px 7px 0px #FEDCE2;
+ }
+p.namepd{
+    color: palevioletred;
+}
+footer{
+    background: #FEDCE2;
+    height: 500px;
+}
+hr.ft{
+    width: 70%;
+    margin-left: 15%;
+}
+hr.vrshort{
+    width: 50px;
+    height: 20px;
+    font-size: 10px;
+    margin-left:50px;
+}
+.pdname{
+    text-align: left;
+    margin-left:50px;
+    color: #555;
+}
+.product-main {
+    padding: 40px 0px 40px -100px;
+}
+
+html {
+    color: -internal-root-color;
+}
+.amount{
+    margin-left: -85%;
+}
+.imgpd{
+    margin-right: -20%;
+}
+.tuvan{
+    height: 50px;
+}
+.tuvan1, .tuvan2{
+    display: inline;
+}
+.tuvan1{
+    margin-left: -65%;
+}
+.tuvan2{
+    background: pink;
+}
+.khungcomment{
+    border: 1px solid #ccc;
+}
+.time p{
+    color: #ccc;
+    display: inline;
+    text-align: left !important;
+}
+.add-to-cart{
+    color: #ccc;
+}
+.add-to-cart:hover{
+    color: pink;
+}
+hr.st{
+    width: 20%;
+}
+.pd-img{
+  
+}
+.pd-img:hover{
+    opacity: 0.8;
+}
+.col-3 ul {
+    list-style: none;
+}
+.col-3 ul li a{
+    color: pink;
+    transition: 0.7s;
+}
+.col-3 ul li a:hover{
+    color: gray;
+    text-decoration: none;
+    margin-left: 60px;
+}
+.boxpd{
+    border: 1px solid #ccc;
+    margin: 10px 0px;
+}
+.nameprod{
+    text-align: center;
+    color: pink;
+}
+.priceprod{
+    text-align: center;
+    color: #ccc;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+th{
+    background: #ccc;
+}
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
+hr.motnua{
+    width: 50%;
+}
+a button.bt{
+    background-color: pink;
+}

@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/','IndexController@showindex');
+Route::get('/shoppingcart','ShoppingCartController@showcart');
+Route::get('/products','ProductController@showproducts');
+Route::get('/productdetail','ProductController@showproductdetail');
