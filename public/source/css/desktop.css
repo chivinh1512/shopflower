@@ -49,6 +49,10 @@ header{
     color: #2B5973;
     margin-left: 10%;
 }
+.fb{
+    margin-top: 30px;
+    margin-left: 50%;;
+}
 .login {
     display: inline;
     color:#2B5973;
@@ -58,13 +62,12 @@ header{
     color: #2B5973
 }
 .fa-shopping-bag{
-    margin-left: 30px;
     color: #2B5973
 }
 .menu{
     padding-left: 20%;
     padding-right: 20%;
-    background-color: pink ! important; 
+    background-color: pink ! important;
 }
 .col .section-title{
     position: relative;
@@ -92,7 +95,7 @@ header{
     background: pink;
     width: 100%;
     margin-bottom: -20px;
-    
+
 }
 .row .image:hover{
     border-radius: 50%;
@@ -230,7 +233,7 @@ hr.st{
     width: 20%;
 }
 .pd-img{
-  
+
 }
 .pd-img:hover{
     opacity: 0.8;
@@ -268,7 +271,7 @@ th{
 }
 th, td {
     padding: 5px;
-    text-align: left;    
+    text-align: left;
 }
 hr.motnua{
     width: 50%;

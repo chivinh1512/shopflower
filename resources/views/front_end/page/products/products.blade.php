@@ -1,4 +1,4 @@
-@extends('master')
+@extends('front_end.master')
 @section('content')
 <br>
     <div class="product">

@@ -1,4 +1,4 @@
-@extends('master')
+@extends('front_end.master')
 @section('content')
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -510,4 +510,5 @@
         </div>
         <div class="col-2"></div>
     </div>
+
 @endsection

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Customer;
 use App\Http\Controllers\Controller;
 use Socialite;
 use Exception;
@@ -33,12 +33,23 @@ class FacebookController extends Controller
             $create['name'] = $user->getName();
             $create['email'] = $user->getEmail();
             $create['facebook_id'] = $user->getId();
+            $create['avatar'] = $user->getAvatar();
 
-            $userModel = new User;
-            $createdUser = $userModel->addNew($create);
-            Auth::loginUsingId($createdUser->id);
-
-            return redirect()->route('home');
+            $customer = new Customer();
+            $customer->name = $create['name'];
+            $customer->email = $create['email'];
+            $customer->facebook_id = $create['facebook_id'];
+            $customer->avatar = $create['avatar'];
+            Customer::insert(
+                [
+                    'name' => $create['name'],
+                    'email' => $create['email'],
+                    'facebook_id' => $create['facebook_id'],
+                    'avatar' => $create['avatar'],
+                ]
+            );
+            dd($customer->name);
+            return view('home', compact('customer'));
 
         } catch (Exception $e) {
 

@@ -12,12 +12,12 @@
 */
 
 
-Route::get('/','IndexController@showindex');
+Route::get('/','IndexController@showindex')->name('home');
 Route::get('/shoppingcart','ShoppingCartController@showcart');
 Route::get('/products','ProductController@showproducts');
 Route::get('/productdetail','ProductController@showproductdetail');
-Route::get('facebook', function () {
-    return view('facebook');
+Route::get('login', function () {
+    return view('login');
 });
 Route::get('auth/facebook', 'Auth\FacebookController@redirectToFacebook');
 Route::get('auth/facebook/callback', 'Auth\FacebookController@handleFacebookCallback');
