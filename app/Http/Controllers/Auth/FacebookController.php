@@ -48,8 +48,7 @@ class FacebookController extends Controller
                     'avatar' => $create['avatar'],
                 ]
             );
-            dd($customer->name);
-            return view('home', compact('customer'));
+            return view('front_end.page.home.home' ,  compact('customer'));
 
         } catch (Exception $e) {
 

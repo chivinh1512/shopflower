@@ -14,8 +14,8 @@
 
 Route::get('/','IndexController@showindex')->name('home');
 Route::get('/shoppingcart','ShoppingCartController@showcart');
-Route::get('/products','ProductController@showproducts');
-Route::get('/productdetail','ProductController@showproductdetail');
+Route::get('/products/{id}','ProductController@showproducts')->name('user.products');
+Route::get('/productdetail/{id}','ProductController@showproductdetail');
 Route::get('login', function () {
     return view('login');
 });

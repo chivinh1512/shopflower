@@ -40,13 +40,15 @@
 
                     <div class="row">
                         @if(isset($customer))
-                            Xin chao : {{$customer->name}}}
+                            Xin chao : {{$customer->name}}
                         @endif
+                        @if(!isset($customer))
                         <div class="col-md-12 fb">
                             <a href="{{ url('auth/facebook') }}" class="btn btn-lg btn-primary btn-block">
                                 <strong>Login Facebook</strong>
                             </a>
                         </div>
+                        @endif
                     </div>
 
                     <a href="/shoppingcart">
@@ -93,9 +95,12 @@
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                </div>
+            @foreach ($categories as $cate)
+                        <a class="dropdown-item" href="products/{{$cate->id}}">{{$cate->name}}</a>
+            @endforeach
 
-            </li>
+
+
 
             <li class="nav-item">
 
@@ -104,10 +109,13 @@
             </li>
 
             <li class="nav-item">
-
                 <a class="nav-link" href="#">Liên hệ</a>
-
             </li>
+{{--            @if($customer->facebook_id == 910332716006384)--}}
+{{--                <li class="nav-item">--}}
+{{--                    <a class="nav-link" href="#">Quan tri website</a>--}}
+{{--                </li>--}}
+{{--            @endif--}}
 
 
 

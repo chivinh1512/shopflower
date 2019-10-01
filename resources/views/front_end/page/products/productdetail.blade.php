@@ -9,11 +9,11 @@
                     <div class="product-main">
                         <div class="row content-row mb-0">
                                     <div class="pd-img">
-                                        <img src="{{asset('source/img/products/bo-hoa-tuoi-happy-e01-247x296.jpg')}}" title="bo-hoa-tuoi-happy-e01-247x296" width="400px" height="400px">
+                                        <img src="source/img/products/{{$productdetail->img}}" title="bo-hoa-tuoi-happy-e01-247x296" width="350px" height="350px">
                                     </div>
                             <div class="product-info summary col-fit col entry-summary product-summary form-flat">
-                                <h1>Happy-E03</h1>
-                                <div class="price">400,000</div>
+                                <h1>{{$productdetail->name}}</h1>
+                                <div class="price">{{$productdetail->price}}VNĐ</div>
 
                                 <div class="message-box relative"><div class="container relative"><div class="inner last-reset">
 
@@ -26,7 +26,8 @@
                                                         </div>
 
 
-                                                    </div></div>
+                                                    </div>
+                                                </div>
 
                                             </div>
 
@@ -38,7 +39,7 @@
                                     <li>Tặng kèm thiệp chúc mừng, băng rôn, bảng treo theo thông điệp yêu cầu</li>
                                     <li>Màu sắc hoa tươi sẽ thay đổi theo mùa, khí hậu của từng khu vực giao hoa</li>
                                     <li>Trường hợp không đủ số lượng hoa như mẫu đã chọn, nhân viên tư vấn sẽ liên hệ với Quý khách hàng để lựa chọn mẫu hoa thay thế phù hợp</li>
-                                    <li> Sản phẩm bao gồm : Một hoa hồng, hai hoa ly, ba hoa lài</li>
+                                    <li> Sản phẩm bao gồm : {{$productdetail->detail}} </li>
                                 </ul>
                                 <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart fa-2x" title="cho vào giỏ hàng"></i></a>
                             </div><!-- .summary -->
@@ -124,87 +125,25 @@
             <br>
             <br>
             <h3>Sản phẩm cùng loại</h3>
+
             <div class="row">
-                <div class="col-3 boxproduct">
-                    <div class="boxpd">
-                        <a href="#">
+                @foreach($groupproduct as $gr)
+                <div class="col-3">
+                    <a href="/productdetail/{{$gr->id}}">
+                        <div class="boxpd">
                             <div class="imgprod">
-                                <img src="source/img/products/bo-hoa-tuoi-happy-flower-E03-247x296.jpg" width="80%" height="50%">
+                                <img src="source/img/products/{{$gr->img}}" width="80%" height="50%">
                             </div>
                             <div class="nameprod">
-                                Happy-A01
+                                {{$gr->name}}
                             </div>
                             <div class="priceprod">
-                                200.000VNĐ
+                                {{$gr->price}}
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-3">
-                    <div class="boxpd">
-                        <div class="imgprod">
-                            <img src="{{asset('source/img/products/bo-hoa-tuoi-happy-flower-E03-247x296.jpg')}}" width="80%" height="50%">
-                        </div>
-                        <div class="nameprod">
-                            Happy-A01
-                        </div>
-                        <div class="priceprod">
-                            200.000VNĐ
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="boxpd">
-                        <div class="imgprod">
-                            <img src="{{asset('source/img/products/bo-hoa-tuoi-happy-flower-E03-247x296.jpg')}}" width="80%" height="50%">
-                        </div>
-                        <div class="nameprod">
-                            Happy-A01
-                        </div>
-                        <div class="priceprod">
-                            200.000VNĐ
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="boxpd">
-                        <div class="imgprod">
-                            <img src="{{asset('source/img/products/bo-hoa-tuoi-happy-flower-E03-247x296.jpg')}}" width="80%" height="50%">
-                        </div>
-                        <div class="nameprod">
-                            Happy-A01
-                        </div>
-                        <div class="priceprod">
-                            200.000VNĐ
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="boxpd">
-                        <div class="imgprod">
-                            <img src="{{asset('source/img/products/bo-hoa-tuoi-happy-flower-E03-247x296.jpg')}}" width="80%" height="50%">
-                        </div>
-                        <div class="nameprod">
-                            Happy-A01
-                        </div>
-                        <div class="priceprod">
-                            200.000VNĐ
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="boxpd">
-                        <div class="imgprod">
-                            <img src="{{asset('source/img/products/bo-hoa-tuoi-happy-flower-E03-247x296.jpg')}}" width="80%" height="50%">
-                        </div>
-                        <div class="nameprod">
-                            Happy-A01
-                        </div>
-                        <div class="priceprod">
-                            200.000VNĐ
-                        </div>
-                    </div>
-        </div>
+                @endforeach
     </div>
         </div>
 

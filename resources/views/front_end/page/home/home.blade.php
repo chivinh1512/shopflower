@@ -43,22 +43,13 @@
             <div class="col">
                 <div class="row newtong">
                     <ul class="newngang">
-                        <li>
-                            <img src="source/img/categories/Anh-bia-bo-hoa-tuoi-400x400.jpg" alt="" width="300px" height="400px">
-                            <span>Bó hoa tươi</span>
-                        </li>
-                        <li>
-                            <img src="source/img/categories/Anh-bia-gio-hoa-tuoi-533x400.jpg" alt="" width="300px" height="400px">
-                            <span>Giỏ hoa tươi</span>
-                        </li>
-                        <li>
-                            <img src="source/img/categories/Anh-bia-hoa-chuc-mung-284x400.jpg" alt="" width="300px" height="400px">
-                            <span>Hoa chúc mừng</span>
-                        </li>
-                        <li>
-                            <img src="source/img/categories/Anh-bia-hoa-chia-buon-e1546829205889-282x400.jpg" alt="" width="300px" height="400px">
-                            <span>Hoa chia buồn</span>
-                        </li>
+                        @foreach ($categories as $cate)
+                            <li>
+                                <a href="products/{{$cate->id}}"> <img src="source/img/categories/{{$cate->img}}" alt="" width="300px" height="400px">
+                                <span>{{$cate->name}}</span>
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -315,200 +306,52 @@
 
     </div>
     <br><br><br>
+    @foreach($categories as $item)
     <div class="row">
-
         <div class="col-2"></div>
         <div class="col">
-            <H2 style="display: inline">BÓ HOA TƯƠI </H2>
+            <H2 style="display: inline">{{$item->name}}</H2>
             <h4 style="text-align: right; margin-right: 15%">Xem thêm</h4>
-
             <hr class="short">
             <br>
-            <div class="row pdtong">
-                <ul class="pdngang">
-                    <li>
-                        <a href="productdetail.html">
-                            <div class="col bdr">
-                                <img src="source/img/products/bo-hoa-tuoi-happy-e01-247x296.jpg">
-                                <p class="namepd">Happy A01</p>
-                                <p class="pricepd">200.000VNĐ</p>
-                        </a>
-                    </li>
-                    <li>
-                        <div class="col bdr">
-                            <img src="source/img/products/bo-hoa-tuoi-happy-flower-E02-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr">
-                            <img src="source/img/products/bo-hoa-tuoi-happy-flower-E03-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr"><img src="source/img/products/bo-hoa-tuoi-happy-flower-E04-1-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr"><img src="source/img/products/bo-hoa-tuoi-happy-flower-E05-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            @if($item->id == 1)
+                    <div class="row pdtong">
+                        <ul class="pdngang">
+                            @foreach($bohoatuoi as $item)
+                            <li>
+                                <a href="productdetail.html">
+                                    <div class="col bdr">
+                                        <img src="source/img/products/{{$item->img}}">
+                                        <p class="namepd">Happy A01</p>
+                                        <p class="pricepd">200.000VNĐ</p>
+                                    </div>
+                                </a>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+            @endif
+            @if($item->id == 2)
+                <div class="row pdtong">
+                    <ul class="pdngang">
+                        @foreach($giohoatuoi as $item)
+                            <li>
+                                <a href="productdetail.html">
+                                    <div class="col bdr">
+                                        <img src="source/img/products/{{$item->img}}">
+                                        <p class="namepd">Happy A01</p>
+                                        <p class="pricepd">200.000VNĐ</p>
+                                    </div>
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
         </div>
+
         <div class="col-2"></div>
     </div>
-    <div class="row">
-
-        <div class="col-2"></div>
-        <div class="col">
-            <H2>GIỎ HOA TƯƠI </H2>
-            <hr class="short">
-            <br>
-            <div class="row pdtong">
-                <ul class="pdngang">
-
-                    <li>
-                        <div class="col bdr">
-                            <img src="source/img/products/Gio-hoa-tuoi-happy-flower-D04-247x296.jpg">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr">
-                            <img src="source/img/products/bo-hoa-tuoi-happy-flower-E02-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr">
-                            <img src="source/img/products/bo-hoa-tuoi-happy-flower-E03-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr"><img src="source/img/products/bo-hoa-tuoi-happy-flower-E04-1-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr"><img src="source/img/products/bo-hoa-tuoi-happy-flower-E05-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-2"></div>
-    </div>
-    <div class="row">
-
-        <div class="col-2"></div>
-        <div class="col">
-            <H2>HOA CHÚC MỪNG </H2>
-            <hr class="short">
-            <br>
-            <div class="row pdtong">
-                <ul class="pdngang">
-
-                    <li>
-                        <div class="col bdr">
-                            <img src="source/img/products/Gio-hoa-tuoi-happy-flower-D04-247x296.jpg">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr">
-                            <img src="source/img/products/bo-hoa-tuoi-happy-flower-E02-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr">
-                            <img src="source/img/products/bo-hoa-tuoi-happy-flower-E03-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr"><img src="source/img/products/bo-hoa-tuoi-happy-flower-E04-1-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr"><img src="source/img/products/bo-hoa-tuoi-happy-flower-E05-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-2"></div>
-    </div>
-    <div class="row">
-
-        <div class="col-2"></div>
-        <div class="col">
-            <H2>HOA CHIA BUỒN </H2>
-
-            <hr class="short">
-            <br>
-            <div class="row pdtong">
-                <ul class="pdngang">
-
-                    <li>
-                        <div class="col bdr">
-                            <img src="source/img/products/Gio-hoa-tuoi-happy-flower-D04-247x296.jpg">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr">
-                            <img src="source/img/products/bo-hoa-tuoi-happy-flower-E02-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr">
-                            <img src="source/img/products/bo-hoa-tuoi-happy-flower-E03-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr"><img src="source/img/products/bo-hoa-tuoi-happy-flower-E04-1-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="col bdr"><img src="source/img/products/bo-hoa-tuoi-happy-flower-E05-247x296.jpg" alt="">
-                            <p class="namepd">Happy A01</p>
-                            <p class="pricepd">200.000VNĐ</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-2"></div>
-    </div>
+    @endforeach
 
 @endsection
