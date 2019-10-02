@@ -306,52 +306,31 @@
 
     </div>
     <br><br><br>
-    @foreach($categories as $item)
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col">
-            <H2 style="display: inline">{{$item->name}}</H2>
-            <h4 style="text-align: right; margin-right: 15%">Xem thêm</h4>
-            <hr class="short">
-            <br>
-            @if($item->id == 1)
-                    <div class="row pdtong">
-                        <ul class="pdngang">
-                            @foreach($bohoatuoi as $item)
-                            <li>
-                                <a href="productdetail.html">
-                                    <div class="col bdr">
-                                        <img src="source/img/products/{{$item->img}}">
-                                        <p class="namepd">Happy A01</p>
-                                        <p class="pricepd">200.000VNĐ</p>
-                                    </div>
-                                </a>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div>
-            @endif
-            @if($item->id == 2)
+    @foreach($abc as $key => $value)
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col">
+                <H2 style="display: inline">{{$key}} </H2>
+                        <a href="/products/{{$value[4]->id_cate}}"><h4 style="text-align: right; margin-right: 15%">Xem thêm</h4></a>
+                <hr class="short">
+                <br>
                 <div class="row pdtong">
                     <ul class="pdngang">
-                        @foreach($giohoatuoi as $item)
-                            <li>
-                                <a href="productdetail.html">
-                                    <div class="col bdr">
-                                        <img src="source/img/products/{{$item->img}}">
-                                        <p class="namepd">Happy A01</p>
-                                        <p class="pricepd">200.000VNĐ</p>
-                                    </div>
-                                </a>
-                            </li>
+                        @foreach($value as $va)
+                        <li>
+                            <a href="productdetail/{{$va->id}}">
+                                <div class="col bdr">
+                                    <img src="source/img/products/{{$va->img}}">
+                                    <p class="namepd">{{$va->name}}</p>
+                                    <p class="pricepd">{{$va->price}}</p>
+                                </div>
+                            </a>
+                        </li>
                         @endforeach
                     </ul>
                 </div>
-            @endif
+            </div>
+            <div class="col-2"></div>
         </div>
-
-        <div class="col-2"></div>
-    </div>
     @endforeach
-
 @endsection

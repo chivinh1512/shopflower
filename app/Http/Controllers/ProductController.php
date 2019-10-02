@@ -16,7 +16,7 @@ class ProductController extends Controller
     public function showproductdetail($id){
            $productdetail=Product::find($id);
            $categories= $productdetail->id_cate;
-           $groupproduct = Product::where('id_cate', $categories)->orderby('id', 'desc') ->limit(5)->get();
+           $groupproduct = Product::where('id_cate', $categories)->where('id', '!=', $id)->orderby('id', 'desc')->limit(5)->get();
         return view('front_end.page.products.productdetail',compact('productdetail','groupproduct'));
     }
 }
