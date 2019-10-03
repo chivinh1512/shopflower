@@ -44,11 +44,11 @@
                 <div class="row newtong">
                     <ul class="newngang">
                         @foreach ($categories as $cate)
-                            <li>
-                                <a href="products/{{$cate->id}}"> <img src="source/img/categories/{{$cate->img}}" alt="" width="300px" height="400px">
-                                <span>{{$cate->name}}</span>
-                                </a>
-                            </li>
+                                <li>
+                                    <a href="products/{{$cate->id}}"> <img src="source/img/categories/{{$cate->img}}" alt="" width="300px" height="400px">
+                                    <span>{{$cate->name}}</span>
+                                    </a>
+                                </li>
                         @endforeach
                     </ul>
                 </div>
@@ -277,20 +277,12 @@
 
                                         </div>
                                     </div><!-- .icon-box -->
-
-
-
                                 </div></div>
-
-
                             <style scope="scope">
 
                             </style>
                         </div>
-
                     </div><!-- .section-content -->
-
-
                     <style scope="scope">
 
                         #section_534284866 {
@@ -302,32 +294,39 @@
             </div>
             <div class="col-2"></div>
         </div>
-
-
     </div>
     <br><br><br>
+
     @foreach($abc as $key => $value)
         <div class="row">
             <div class="col-2"></div>
             <div class="col">
                 <H2 style="display: inline">{{$key}} </H2>
-                        <a href="/products/{{$value[4]->id_cate}}"><h4 style="text-align: right; margin-right: 15%">Xem thêm</h4></a>
+                        <a href="/products/{{$value[0]->id_cate}}"><h4 style="text-align: right; margin-right: 15%">Xem thêm</h4></a>
                 <hr class="short">
                 <br>
-                <div class="row pdtong">
-                    <ul class="pdngang">
-                        @foreach($value as $va)
-                        <li>
-                            <a href="productdetail/{{$va->id}}">
-                                <div class="col bdr">
-                                    <img src="source/img/products/{{$va->img}}">
-                                    <p class="namepd">{{$va->name}}</p>
-                                    <p class="pricepd">{{$va->price}}</p>
+                <div class="row">
+                    @if($value != null)
+                        @forelse($value as $va)
+                            <div class="col-3 boxproduct">
+                                <div class="boxpd">
+                                    <a href="/productdetail/{{$va->id}}">
+                                        <div class="imgprod">
+                                            <img src="source/img/products/{{$va->img}}" width="70%" height="80%" style="margin-left: 15%">
+                                        </div>
+                                        <div class="nameprod">
+                                            {{$va->name}}
+                                        </div>
+                                        <div class="priceprod">
+                                            {{$va->price}} VNĐ
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </li>
-                        @endforeach
-                    </ul>
+                            </div>
+                        @empty
+                            <div style="padding-left: 30px">Không có kết quả</div>
+                        @endforelse
+                    @endif
                 </div>
             </div>
             <div class="col-2"></div>

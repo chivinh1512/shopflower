@@ -127,23 +127,27 @@
             <h3>Sản phẩm cùng loại</h3>
 
             <div class="row">
-                @foreach($groupproduct as $gr)
-                <div class="col-3">
-                    <a href="/productdetail/{{$gr->id}}">
-                        <div class="boxpd">
-                            <div class="imgprod">
-                                <img src="source/img/products/{{$gr->img}}" width="80%" height="50%">
-                            </div>
-                            <div class="nameprod">
-                                {{$gr->name}}
-                            </div>
-                            <div class="priceprod">
-                                {{$gr->price}}
+                <div class="row">
+                    @forelse($groupproduct as $gr)
+                        <div class="col-3 boxproduct">
+                            <div class="boxpd">
+                                <a href="/productdetail/{{$gr->id}}">
+                                    <div class="imgprod">
+                                        <img src="source/img/products/{{$gr->img}}" width="80%" height="80%" style="margin-left: 10%">
+                                    </div>
+                                    <div class="nameprod">
+                                        {{$gr->name}}
+                                    </div>
+                                    <div class="priceprod">
+                                        {{$gr->price}} VNĐ
+                                    </div>
+                                </a>
                             </div>
                         </div>
-                    </a>
+                    @empty
+                        <div style="padding-left: 30px">Không có kết quả</div>
+                    @endforelse
                 </div>
-                @endforeach
     </div>
         </div>
 
