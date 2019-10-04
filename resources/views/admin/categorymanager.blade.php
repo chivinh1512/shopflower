@@ -11,13 +11,13 @@
             </form>
             <table class="table table-bordered">
                 <tr>
-                    <td>Mã loại</td>
-                    <td>Tên loại</td>
-                    <td>Ảnh loại</td>
-                    <td>Thao tác</td>
+                    <th>Mã loại</th>
+                    <th>Tên loại</th>
+                    <th>Ảnh loại</th>
+                    <th>Thao tác</th>
                 </tr>
                 @forelse($data as $da)
-                    <tr>
+                    <tr class="row-pd">
                         <td>{{$da->id}}</td>
                         <td>{{$da->name}}</td>
                         <td><img src="source/img/categories/{{$da->img}}" style="width: 70px"/></td>

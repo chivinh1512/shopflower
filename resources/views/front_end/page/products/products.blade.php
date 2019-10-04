@@ -11,7 +11,7 @@
                         <ul>
                             @foreach($categories as $cate)
                                 <li style="text-transform: uppercase;"> <a href="{{ route('user.products', ['id' => $cate->id]) }}">{{$cate->name}}</a></li>
-                                <hr>
+                                <hr class="hrboxpd">
                             @endforeach
                         </ul>
                     </div>

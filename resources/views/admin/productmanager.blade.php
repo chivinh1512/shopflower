@@ -22,15 +22,15 @@
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <tr>
-                            <td>Mã sản phẩm</td>
-                            <td>Tên sản phẩm</td>
-                            <td>Hình</td>
-                            <td>Giá tiền</td>
-                            <td>Chi tiết sản phẩm</td>
-                            <td>Thao tác</td>
+                            <th>Mã sản phẩm</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Hình</th>
+                            <th>Giá tiền</th>
+                            <th>Chi tiết sản phẩm</th>
+                            <th>Thao tác</th>
                         </tr>
                         @forelse($dataproduct as $da)
-                            <tr>
+                            <tr class="row-pd">
                                 <td>{{$da->id}}</td>
                                 <td>{{$da->name}}</td>
                                 <td><img src="source/img/products/{{$da->img}}" style="width: 70px"/></td>

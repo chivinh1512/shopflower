@@ -23,8 +23,11 @@ Route::get('login', function () {
 Route::get('auth/facebook', 'Auth\FacebookController@redirectToFacebook');
 Route::get('auth/facebook/callback', 'Auth\FacebookController@handleFacebookCallback');
 
+/*ShoppingCart*/
+Route::get('/addproducttocart/{id}','ShoppingcartController@addproducttocart');
+Route::get('/delproductincart','ShoppingcartController@delproductincart');
 
-
+/*Admin Controller*/
 Route::get('/admin','AdminController@admin');
 
 /*Category manager*/

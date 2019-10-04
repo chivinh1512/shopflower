@@ -65,13 +65,8 @@
                     <div class="bg section-bg fill bg-fill  bg-loaded">
                     </div><!-- .section-bg -->
                     <div class="section-content relative">
-
-
                         <div class="row align-center" id="row-857580083">
-
                             <div class="col medium-4 small-9 large-4"><div class="col-inner text-center">
-
-
                                     <div class="icon-box featured-box icon-box-center text-center">
                                         <div class="icon-box-img" style="width: 60px">
                                             <div class="icon">
@@ -118,20 +113,12 @@
                                             </div>
                                         </div>
                                         <div class="icon-box-text last-reset">
-
-
                                             <h3 class="uppercase">Cam kết hài lòng </h3>
                                             <p>Cam kết mang đến những mẫu hoa chất lượng theo yêu cầu của Quý khách hàng</p>
-
                                         </div>
                                     </div><!-- .icon-box -->
-
-
-
                                 </div></div>
                             <div class="col medium-4 small-9 large-4"><div class="col-inner text-center">
-
-
                                     <div class="icon-box featured-box icon-box-center text-center">
                                         <div class="icon-box-img" style="width: 60px">
                                             <div class="icon">
@@ -184,20 +171,12 @@
                                             </div>
                                         </div>
                                         <div class="icon-box-text last-reset">
-
-
                                             <h3 class="uppercase">Miễn phí thông điệp</h3>
                                             <p>Thiệp mừng / Băng rôn kèm thông điệp được chúng tôi tặng kèm miễn phí cho quý khách</p>
-
                                         </div>
                                     </div><!-- .icon-box -->
-
-
-
                                 </div></div>
                             <div class="col medium-4 small-9 large-4"><div class="col-inner text-center">
-
-
                                     <div class="icon-box featured-box icon-box-center text-center">
                                         <div class="icon-box-img" style="width: 60px">
                                             <div class="icon">

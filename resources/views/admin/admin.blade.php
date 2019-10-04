@@ -4,6 +4,13 @@
 <body>
 @include('admin.headeradmin')
 @yield ('content')
-</body>
 
+</body>
+@include('front_end.block.footer.script')
+<script>
+    $(document).ready(function () {
+        $(".row-pd:even").css("background-color", "#eaf2f4");
+    });
+</script>
 </html>
+
