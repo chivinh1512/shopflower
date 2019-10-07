@@ -30,6 +30,7 @@ $cart = \Session::get('cart');
                                     @php $totalall = 0; @endphp
                                     @foreach($cart as $va)
                                         @foreach($va as $id => $v)
+                                          <input type="hidden" name="idproduct[]" value="{{$id}}">
                                                 <tr>
                                                   <td class="name">
                                                       {{$v['name']}}
@@ -55,7 +56,10 @@ $cart = \Session::get('cart');
                                 @endif
                                                 <tr>
                                                     <td colspan="4" style="text-align: center">Tổng tiền</td>
-                                                    <td class="totalall"><input type="number" name="totalall" disabled="disabled"> {{$totalall}}VNĐ</td>
+                                                    <td class="totalall">
+                                                        {{$totalall}}
+                                                    </td>
+                                                    <input type="hidden" name="totalall" class="vinh" value="{{$totalall}}">
                                                     <td></td>
                                                 </tr>
                                                 <tr>
