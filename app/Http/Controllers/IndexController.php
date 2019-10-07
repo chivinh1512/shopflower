@@ -5,10 +5,12 @@ use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 use DB;
+use Auth;
 
 class IndexController extends Controller
 {
     public function showindex(){
+
         $categories = Category::orderBy('id')->skip(0)->take(4)->get();
         $abc = [];
         foreach ($categories as $key => $value) {

@@ -13,11 +13,13 @@
         $(".productqty").change(function () {
             productqty=$(this).val();
             price=$(this).parent().parent().find('.price').html();
-            totalallold=$('.totalall').html();
-            total =  parseInt(productqty) * parseInt(price);
-            
-            $('.total').html(total);
-
+            tiencu=$(this).parent().parent().find('.total').html();
+            thanhtienmoi=parseInt(price)*parseInt(productqty);
+            thanhtiencu=$(this).parent().parent().find('.total').html(thanhtienmoi + 'VNĐ');
+            total=$(this).parent().parent().find('.total').html();
+            totalold=$(this).parent().parent().parent().find('.totalall').html();
+            totalnew=parseInt(totalold)+parseInt(tiencu);
+            totalnew=$(this).parent().parent().parent().find('.totalall').html(totalnew + 'VNĐ');
         });
         $(".hrboxpd:last").css('display','none');
     });

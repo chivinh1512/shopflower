@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -31,9 +30,11 @@ class User extends Authenticatable
     {
         $check = static::where('facebook_id',$input['facebook_id'])->first();
 
+
         if(is_null($check)){
             return static::create($input);
         }
+
 
         return $check;
     }

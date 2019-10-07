@@ -33,16 +33,13 @@
                 <div class="col-4">
 
                     <img src="source/img/logo/logo.jpg" alt="">
-
                 </div>
-
                 <div class="col-4 down">
-
                     <div class="row">
-                        @if(isset($customer))
-                            Xin chao : {{$customer->name}}
+                        @if(\Auth::user())
+                            Xin chao : {{\Auth::user()->name}}
                         @endif
-                        @if(!isset($customer))
+                        @if(!\Auth::user())
                         <div class="col-md-12 fb">
                             <a href="{{ url('auth/facebook') }}" class="btn btn-lg btn-primary btn-block">
                                 <strong>Login Facebook</strong>

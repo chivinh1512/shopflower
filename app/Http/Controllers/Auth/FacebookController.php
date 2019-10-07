@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Socialite;
 use Exception;
 use Auth;
+use App\User;
 
 class FacebookController extends Controller
 {
@@ -33,27 +34,17 @@ class FacebookController extends Controller
             $create['name'] = $user->getName();
             $create['email'] = $user->getEmail();
             $create['facebook_id'] = $user->getId();
-            $create['avatar'] = $user->getAvatar();
+            $userModel = new User;
+            $createdUser = $userModel->addNew($create);
+            Auth::loginUsingId($createdUser->id);
+            $category['user']=$create;
 
-            $customer = new Customer();
-            $customer->name = $create['name'];
-            $customer->email = $create['email'];
-            $customer->facebook_id = $create['facebook_id'];
-            $customer->avatar = $create['avatar'];
-            Customer::insert(
-                [
-                    'name' => $create['name'],
-                    'email' => $create['email'],
-                    'facebook_id' => $create['facebook_id'],
-                    'avatar' => $create['avatar'],
-                ]
-            );
-            return view('front_end.page.home.home' ,  compact('customer'));
+            return view('front_end.page.home.home' , $category );
 
         } catch (Exception $e) {
 
-            return redirect('auth/facebook');
+            return $e;
 
-        }
+    }
     }
 }

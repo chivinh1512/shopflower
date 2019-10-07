@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class   CreateTableProductsTable extends Migration
+class CreateTableBilldetailTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class   CreateTableProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('billdetail', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+
+            $table->integer('idproduct');
+            $table->string('amount');
+            $table->integer('idbill');
             $table->integer('price');
-            $table->string('img');
-            $table->string('detail');
-            $table->integer('id_cate');
+            $table->integer('total');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class   CreateTableProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('billdetail');
     }
 }

@@ -36,7 +36,7 @@
                             @empty
                                 <div style="padding-left: 30px">Không có kết quả</div>
                             @endforelse
-                        </div>  
+                        </div>
                     </div>
                 </div>
             </div>

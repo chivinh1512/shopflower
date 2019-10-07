@@ -10,7 +10,13 @@ $cart = \Session::get('cart');
             <div class="col">
                 <form action="" method="post">
                     @csrf()
+                    @if(\Auth::user())
+                        <input type="hidden" name="facebook_id" value=" {{\Auth::user()->facebook_id}}">
+                    @endif
+
+                    @if(isset($cart))
                         <table style="width:100%">
+
                                 <tr>
                                   <th>Tên Sản phẩm</th>
                                   <th>Hình sản phẩm</th>
@@ -49,7 +55,7 @@ $cart = \Session::get('cart');
                                 @endif
                                                 <tr>
                                                     <td colspan="4" style="text-align: center">Tổng tiền</td>
-                                                    <td class="totalall">{{$totalall}}VNĐ</td>
+                                                    <td class="totalall"><input type="number" name="totalall" disabled="disabled"> {{$totalall}}VNĐ</td>
                                                     <td></td>
                                                 </tr>
                                                 <tr>
@@ -58,13 +64,16 @@ $cart = \Session::get('cart');
                                                 </td>
                                                 <td></td>
                                             </tr>
+
                         </table>
                         <br>
 
                         <button class="bt-sm boxproduct" type="submit">Thanh toán</button>
                         <br>
-
                 </form>
+                @else
+                    <div style="text-align: center">Bạn chưa chọn sản phẩm</div>
+                @endif
             </div>
             <div class="col-2"></div>
         </div>
