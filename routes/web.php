@@ -16,13 +16,14 @@ Route::get('/','IndexController@showindex')->name('home');
 
 
 
-Route::get('/shoppingcart','ShoppingCartController@showcart');
-Route::post('/shoppingcart','ShoppingCartController@postbill');
+
 
 
 Route::get('/products/{id}','ProductController@showproducts')->name('user.products');
 Route::get('/productdetail/{id}','ProductController@showproductdetail');
 Route::get('/search','SearchController@search');
+Route::get('/contact','ContactController@contact');
+Route::post('/contact','ContactController@postcontact');
 Route::get('login', function () {
     return view('login');
 });
@@ -32,6 +33,8 @@ Route::get('auth/facebook/callback', 'Auth\FacebookController@handleFacebookCall
 /*ShoppingCart*/
 Route::get('/addproducttocart/{id}','ShoppingcartController@addproducttocart');
 Route::get('/delproductincart','ShoppingcartController@delproductincart');
+Route::get('/shoppingcart','ShoppingCartController@showcart');
+Route::post('/shoppingcart','ShoppingCartController@postbill');
 
 /*Admin Controller*/
 Route::get('/admin','AdminController@admin');

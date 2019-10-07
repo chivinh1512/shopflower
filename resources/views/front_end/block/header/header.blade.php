@@ -89,7 +89,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Liên hệ</a>
+                <a class="nav-link" href="contact">Liên hệ</a>
             </li>
 {{--            @if($customer->facebook_id == 910332716006384)--}}
 {{--                <li class="nav-item">--}}
