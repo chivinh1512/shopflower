@@ -52,3 +52,8 @@ Route::get('/admin/productmanager/delete/{id}','ProductManagerController@delete'
 Route::post('/admin/productmanager','ProductManagerController@postproducts');
 Route::get('/admin/productmanager/edit/{id}','ProductManagerController@geteditproduct');
 Route::post('/admin/productmanager/edit/{id}','ProductManagerController@postedit');
+
+/*Bill manager*/
+Route::get('/admin/billmanager','BillManagerController@showbills');
+Route::get('/admin/billmanager/{id}','BillManagerController@getbilldetail');
+Route::get('/admin/billmanager/{id}/{status}','BillManagerController@editstatus');
