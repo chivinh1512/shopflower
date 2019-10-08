@@ -4,6 +4,7 @@
         <div class="alert alert-success" style="text-align: center; margin-left: 35%; font-size: 20px; width: 30%">{{session('success')}} </div>
     @endif
     <br><br>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0&appId=422307641749659&autoLogAppEvents=1"></script>
     <div class="productdetail">
         <div class="row">
             <div class="col-2"></div>
@@ -62,89 +63,37 @@
     <div class="row">
         <div class="col-2"></div>
         <div class="col">
-            <div class="row">
-                <div class="col">
-                    2 bình luận về Happy03
-
-                    <div class="khungcomment">
-                        <div class="nameuser">
-                            <b>Vinh</b>
-                        </div>
-                        <div class="content">
-                            Hoa rất đẹp
-                        </div>
-                        <div class="time">
-                            Đã gởi vào<p>19/8/2014</p>
-                        </div>
-
-                    </div>
                     <br>
-                    <div class="khungcomment">
-                        <div class="nameuser">
-                            <b>Lân</b>
-                        </div>
-                        <div class="content">
-                            Hoa xấu ớn
-                        </div>
-                        <div class="time">
-                            Đã gởi vào<p>19/7/2020</p>
-                        </div>
-
+                    <h1>Phản hồi</h1>
+                    <div class="commentfacebook" style="width: 1000px">
+                        <div class="fb-comments" data-href="https://localhost/productdetail" data-width="1000" data-numposts="10"></div>
                     </div>
-                    <br>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-end">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <h3>Sản phẩm cùng loại</h3>
 
-
-
-                    <form method="post">
-                        <div class="comment">
-                            <textarea name="content" style="height: 100px;width: 100%" placeholder="Mời bạn để lại bình luận"></textarea>
-                            <input type="submit">
-                        </div>
-                    </form>
+                    <div class="row">
+                        <div class="row">
+                            @forelse($groupproduct as $gr)
+                                <div class="col-3 boxproduct">
+                                    <div class="boxpd">
+                                        <a href="/productdetail/{{$gr->id}}">
+                                            <div class="imgprod">
+                                                <img src="source/img/products/{{$gr->img}}" width="80%" height="80%" style="margin-left: 10%">
+                                            </div>
+                                            <div class="nameprod">
+                                                {{$gr->name}}
+                                            </div>
+                                            <div class="priceprod">
+                                                {{$gr->price}} VNĐ
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            @empty
+                                <div style="padding-left: 30px">Không có kết quả</div>
+                            @endforelse
                 </div>
             </div>
-            <br>
-            <br>
-            <h3>Sản phẩm cùng loại</h3>
-
-            <div class="row">
-                <div class="row">
-                    @forelse($groupproduct as $gr)
-                        <div class="col-3 boxproduct">
-                            <div class="boxpd">
-                                <a href="/productdetail/{{$gr->id}}">
-                                    <div class="imgprod">
-                                        <img src="source/img/products/{{$gr->img}}" width="80%" height="80%" style="margin-left: 10%">
-                                    </div>
-                                    <div class="nameprod">
-                                        {{$gr->name}}
-                                    </div>
-                                    <div class="priceprod">
-                                        {{$gr->price}} VNĐ
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    @empty
-                        <div style="padding-left: 30px">Không có kết quả</div>
-                    @endforelse
-                </div>
     </div>
-        </div>
-
         <div class="col-2"></div>
     </div>
     <br>
