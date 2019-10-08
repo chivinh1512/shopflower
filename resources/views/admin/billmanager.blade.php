@@ -28,12 +28,11 @@
                                         <a style="color: green; font-size: 20px">   Đã xác nhận </a>
                                     @endif
                                     @if($da->status==3)
-                                        <a style="color: red; font-size: 20px">   Đã hủy  </a>
+                                        <a style="color: red; font-size: 20px">   Đã giao </a>
                                     @endif
                                     @if($da->status==4)
-                                        <a style="color: black; font-size: 20px">   Đã giao  </a>
-                                        @endif
-                                        </a>
+                                        <a style="color: black; font-size: 20px">   Đã hủy  </a>
+                                    @endif
                                 </td>
                             </tr>
                         @empty

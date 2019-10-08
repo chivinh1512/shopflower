@@ -15,8 +15,14 @@
 Route::get('/','IndexController@showindex')->name('home');
 
 
-
-
+/*Profile*/
+Route::get('/profile','ProfileController@profile');
+Route::get('/profile/showprofile','ProfileController@showprofile');
+Route::post('/profile/showprofile','ProfileController@posteditprofile');
+Route::get('/historybill/1','ProfileController@show1');
+Route::get('/historybill/2','ProfileController@show2');
+Route::get('/historybill/3','ProfileController@show3');
+Route::get('/historybill/4','ProfileController@show4');
 
 
 Route::get('/products/{id}','ProductController@showproducts')->name('user.products');

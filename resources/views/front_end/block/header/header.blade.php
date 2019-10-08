@@ -40,7 +40,7 @@
                     <div class="row">
                         @if(\Auth::user())
                             <br>
-                            Xin chao : {{\Auth::user()->name}}
+                            <div style="margin: 30px 0px 0px 30%"> <a href="/profile"> Xin chào : {{\Auth::user()->name}}</a></div>
                         @endif
                         @if(!\Auth::user())
                         <div class="col-md-12 fb">
@@ -52,7 +52,7 @@
                     </div>
 
                     <a href="/shoppingcart">
-                        <i class="fa fa-shopping-bag fa-2x" aria-hidden="true" style="margin-left: 130px; margin-top: 10px;"></i>
+                        <i class="fa fa-shopping-bag fa-2x" aria-hidden="true" style="margin-left: 60%; margin-top: 10px;"></i>
                     </a>
 
                 </div>

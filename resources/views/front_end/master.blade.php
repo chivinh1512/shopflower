@@ -25,5 +25,8 @@
         });
         $(".hrboxpd:last").css('display','none');
         $(".alert-success").fadeOut(2000);
+        $('.ab').click(function () {
+            $("#getfile").click();
+        });
     });
 </script>
