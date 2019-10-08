@@ -34,9 +34,12 @@
 
                     <img src="source/img/logo/logo.jpg" alt="">
                 </div>
+
                 <div class="col-4 down">
+
                     <div class="row">
                         @if(\Auth::user())
+                            <br>
                             Xin chao : {{\Auth::user()->name}}
                         @endif
                         @if(!\Auth::user())

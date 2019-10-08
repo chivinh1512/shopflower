@@ -1,7 +1,7 @@
 @extends('front_end.master')
 @section('content')
     @if(session('success'))
-        <div class="alert alert-success" style="text-align: center;font-size: 30px">{{session('success')}} </div>
+        <div class="alert alert-success" style="text-align: center; margin-left: 35%; font-size: 20px; width: 30%">{{session('success')}} </div>
     @endif
     <br><br>
     <div class="productdetail">
@@ -36,7 +36,6 @@
                                     <li>Giao hàng nhanh trong vòng 2h kể từ khi hoàn tất thanh toán</li>
                                     <li>Tặng kèm thiệp chúc mừng, băng rôn, bảng treo theo thông điệp yêu cầu</li>
                                     <li>Màu sắc hoa tươi sẽ thay đổi theo mùa, khí hậu của từng khu vực giao hoa</li>
-                                    <li>Trường hợp không đủ số lượng hoa như mẫu đã chọn, nhân viên tư vấn sẽ liên hệ với Quý khách hàng để lựa chọn mẫu hoa thay thế phù hợp</li>
                                     <li> Sản phẩm bao gồm : {{$productdetail->detail}} </li>
                                 </ul>
                                 <a class="add-to-cart" href="/addproducttocart/{{$productdetail->id}}"><i class="fa fa-shopping-cart fa-2x" title="cho vào giỏ hàng"></i></a>

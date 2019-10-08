@@ -4,6 +4,10 @@
 <?php
 $cart = \Session::get('cart');
 ?>
+@if(session('ordered'))
+        <div class="alert alert-success" style="text-align: center; margin-left: 35%; font-size: 20px; width: 30%">{{session('ordered')}} </div>
+
+@endif
 <div class="shoppingcart">
         <div class="row">
             <div class="col-2"></div>
@@ -76,7 +80,7 @@ $cart = \Session::get('cart');
                         <br>
                 </form>
                 @else
-                    <div style="text-align: center">Bạn chưa chọn sản phẩm</div>
+                    <div style="text-align: center">Giỏ hàng trống</div>
                 @endif
             </div>
             <div class="col-2"></div>

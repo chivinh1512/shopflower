@@ -24,5 +24,6 @@
             $('.vinh').val(abc);
         });
         $(".hrboxpd:last").css('display','none');
+        $(".alert-success").fadeOut(2000);
     });
 </script>

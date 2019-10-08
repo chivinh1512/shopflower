@@ -62,25 +62,20 @@ class ShoppingCartController extends Controller
         return redirect()->back();
     }
     public function postbill(Request $request){
-        $bills = new Bill();
-        $bills->facebook_id = $request->facebook_id;
-        $bills->note = $request->note;
-        $bills->total = $request->totalall;
-        $bills->status = '1';
-        $bills->save();
 
-//        $idbill = $bills->orderby('id', 'desc')->first('id');
-//        $id = ($idbill['id']);
+        $bills = Bill::create([
+            'facebook_id'=>$request->facebook_id,
+            'note'=>$request->note,
+            'total'=>$request->totalall,
+            'status'=>1,
+        ]);
         $idproduct = $request['idproduct'];
-
         $amount = $request['amount'];
-
         foreach ($idproduct as $key => $value){
             $billdetail = new billdetail();
             $billdetail->amount = $amount[$key];
             $billdetail->idproduct = $idproduct[$key];
-
-            $billdetail->idbill = $id;
+            $billdetail->idbill = $bills['id'];
             $priceproduct = Product::where('id', $idproduct[$key])->value('price');
             $billdetail->price = $priceproduct;
             $billdetail->total = $priceproduct * $amount[$key];
