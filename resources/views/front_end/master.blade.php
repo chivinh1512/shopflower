@@ -28,5 +28,8 @@
         $('.ab').click(function () {
             $("#getfile").click();
         });
+        $(document).ready(function () {
+            $(".row-pd:even").css("background-color", "#eaf2f4");
+        });
     });
 </script>

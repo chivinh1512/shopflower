@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
 use App\Bill;
+use App\Billdetail;
 
 class ProfileController extends Controller
 {
@@ -16,7 +18,7 @@ class ProfileController extends Controller
         return view('front_end.page.profile.showprofile');
     }
     public function posteditprofile(Request $request){
-        $id = \Auth::user()->id;
+        $id = Auth::user()->id;
         $edituser = User::find($id);
         $edituser->name = $request->name;
         $edituser->phone = $request->phone;
@@ -29,8 +31,33 @@ class ProfileController extends Controller
         return redirect()->intended('profile/showprofile');
     }
     public function show1(){
-        $facebook_id = \Auth::user()->facebook_id;
-        $bill= Bill::where('facebook_id', $facebook_id)->get();
+        $facebook_id = Auth::user()->facebook_id;
+        $bill= Bill::where('facebook_id', $facebook_id)->where('status','1')->get();
         return view('front_end.page.profile.showhistorybill1',compact('bill'));
     }
+    public function show2(){
+        $facebook_id = Auth::user()->facebook_id;
+        $bill= Bill::where('facebook_id', $facebook_id)->where('status','2')->get();
+        return view('front_end.page.profile.showhistorybill2',compact('bill'));
+    }
+    public function show3(){
+        $facebook_id = Auth::user()->facebook_id;
+        $bill= Bill::where('facebook_id', $facebook_id)->where('status','3')->get();
+        return view('front_end.page.profile.showhistorybill3',compact('bill'));
+    }
+    public function show4(){
+        $facebook_id = Auth::user()->facebook_id;
+        $bill= Bill::where('facebook_id', $facebook_id)->where('status','4')->get();
+        return view('front_end.page.profile.showhistorybill4',compact('bill'));
+    }
+    public function showbilldetail($id){
+        $billdetail = Billdetail::where('idbill', $id)->get();
+        foreach ($billdetail as $key => $value) {
+            $idproduct = $value['id'];
+            $nameproduct = Product::find($idproduct)->name;
+            $billdetail[$key]['nameproduct'] = $nameproduct;
+        }
+        return view('front_end.page.profile.showbilldetail',compact('billdetail','id'));
+    }
+
 }
