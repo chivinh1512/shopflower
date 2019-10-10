@@ -52,12 +52,20 @@ class ProfileController extends Controller
     }
     public function showbilldetail($id){
         $billdetail = Billdetail::where('idbill', $id)->get();
-        foreach ($billdetail as $key => $value) {
-            $idproduct = $value['id'];
-            $nameproduct = Product::find($idproduct)->name;
-            $billdetail[$key]['nameproduct'] = $nameproduct;
-        }
-        return view('front_end.page.profile.showbilldetail',compact('billdetail','id'));
-    }
 
+        $sttbill = Bill::find($id);
+            $stt=$sttbill->status;
+        foreach ($billdetail as $key => $value){
+            $idproduct=$value['idproduct'];
+            $nameproduct = Product::find($idproduct)->name;
+            $billdetail[$key]['nameproduct']=$nameproduct;
+        }
+        return view('front_end.page.profile.showbilldetail',compact('billdetail','id','stt'));
+    }
+    public function editbill($id){
+        $statusbill = Bill::find($id);
+        $statusbill->status = '4';
+        $statusbill->save();
+        return redirect('historybill/1');
+    }
 }

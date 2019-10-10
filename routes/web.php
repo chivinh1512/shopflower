@@ -26,6 +26,9 @@ Route::get('/historybill/4','ProfileController@show4');
 
 Route::get('/billdetail/{id}','ProfileController@showbilldetail');
 
+Route::post('/billdetail/{id}','ProfileController@editbill');
+Route::get('/billdetail2/{id}','ProfileController@showbilldetail2');
+
 
 Route::get('/products/{id}','ProductController@showproducts')->name('user.products');
 Route::get('/productdetail/{id}','ProductController@showproductdetail');

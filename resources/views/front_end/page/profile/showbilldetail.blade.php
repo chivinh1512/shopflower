@@ -28,11 +28,14 @@
         </div>
         <div class="col"></div>
     </div>
+    @if($stt==1)
     <div class="row">
         <div class="col"></div>
-        <div class="col-8">
-            <a href="/delbill/{{$id}}">Hủy đơn hàng</a>
-        </div>
+        <form action="" method="post">
+            @csrf
+            <input type="submit" value="Hủy đơn hàng">
+        </form>
         <div class="col"></div>
     </div>
+    @endif
 @endsection
