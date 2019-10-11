@@ -203,18 +203,6 @@ html {
 .imgpd{
     margin-right: -20%;
 }
-.tuvan{
-    height: 50px;
-}
-.tuvan1, .tuvan2{
-    display: inline;
-}
-.tuvan1{
-    margin-left: -65%;
-}
-.tuvan2{
-    background: pink;
-}
 .khungcomment{
     border: 1px solid #ccc;
 }

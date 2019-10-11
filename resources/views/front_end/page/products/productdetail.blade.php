@@ -10,45 +10,27 @@
             <div class="col-2"></div>
             <div class="col">
                 <div class="row">
-                    <div class="product-main">
-                        <div class="row content-row mb-0">
+
+                        <div class="row">
+                            <div class="col-xs-5">
                                     <div class="pd-img">
                                         <img src="source/img/products/{{$productdetail->img}}" title="bo-hoa-tuoi-happy-e01-247x296" width="350px" height="350px">
                                     </div>
-                            <div class="product-info summary col-fit col entry-summary product-summary form-flat">
+                            </div>
+                            <div class="col-xs-7" style="margin-left: 20px">
                                 <h1>{{$productdetail->name}}</h1>
-                                <div class="price">{{$productdetail->price}}VNĐ</div>
-
-                                <div class="message-box relative"><div class="container relative"><div class="inner last-reset">
-
-                                            <div class="row row-small align-middle align-center">
-
-                                                <div class="col medium-7 small-12 large-7"><div class="col-inner text-center" style="margin:0 0px 0px 0px;">
-                                                        <div class="tuvan">
-                                                            <div class="tuvan1">Tư vấn đặt hoa : </div>
-                                                            <div class="tuvan2">0339-222-265</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div></div></div>
-                                <div class="gap-element clearfix" style="display:block; height:auto; padding-top:0px"></div>
-                                <ul>
+                                <div class="price">Giá: {{$productdetail->price}}VNĐ</div>
+                                <div>Tư vấn đặt hoa : 0339-222-265 </div>
+                                <ul style="list-style-type: none">
                                     <li>Giao hàng nhanh trong vòng 2h kể từ khi hoàn tất thanh toán</li>
                                     <li>Tặng kèm thiệp chúc mừng, băng rôn, bảng treo theo thông điệp yêu cầu</li>
                                     <li>Màu sắc hoa tươi sẽ thay đổi theo mùa, khí hậu của từng khu vực giao hoa</li>
                                     <li> Sản phẩm bao gồm : {{$productdetail->detail}} </li>
                                 </ul>
                                 <a class="add-to-cart" href="/addproducttocart/{{$productdetail->id}}"><i class="fa fa-shopping-cart fa-2x" title="cho vào giỏ hàng"></i></a>
-                            </div><!-- .summary -->
-
-                            <div id="product-sidebar" class="mfp-hide">
-                                <div class="sidebar-inner">
-                                </div><!-- .sidebar-inner -->
                             </div>
+                        </div>
 
-                        </div><!-- .row -->
-                    </div>
                 </div>
             </div>
             <div class="col-2"></div>

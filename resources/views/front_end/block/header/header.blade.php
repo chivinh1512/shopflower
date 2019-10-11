@@ -26,79 +26,56 @@
          logged_in_greeting="Xin chào ! Chúng tôi đã sẵn sàng tư vấn hỗ trợ"
          logged_out_greeting="Xin chào ! Chúng tôi đã sẵn sàng tư vấn hỗ trợ">
     </div>
+    <?php
+    $cart = Session::get('cart');
+    $soluongsanphamtrongcart=count($cart);
+    ?>
     <div class="row">
-
         <div class="col-2"></div>
-
         <div class="col-8">
-
             <div class="row">
-
-                <div class="col-4">
-
+                <div class="col-xl-4">
                     <a href="https://www.facebook.com/saigonroses/">
-
                         <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
-
                     </a>
-
                     <a href="">
-
                         <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
-
                     </a>
-
                     <a href="">
-
                         <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-
                     </a>
-
                 </div>
-
-                <div class="col-4">
-
+                <div class="col-xl-4">
                     <img src="source/img/logo/logo.jpg" alt="">
                 </div>
-
-                <div class="col-4 down">
-
+                <div class="col-xl-4">
                     <div class="row">
-                        @if(\Auth::user())
+                        @if(Auth::user())
                             <br>
-                            <div style="margin: 30px 0px 0px 30%"> <a href="/profile"> Xin chào : {{\Auth::user()->name}}</a></div>
+                            <div style="margin: 30px 0px 0px 35%"> <a href="/profile"> Xin chào : {{Auth::user()->name}}</a></div>
                         @endif
-                        @if(!\Auth::user())
+                        @if(!Auth::user())
                         <div class="col-md-12 fb">
-                            <a href="{{ url('auth/facebook') }}" class="btn btn-lg btn-primary btn-block">
+                            <a href="{{ url('auth/facebook') }}" class="btn btn-lg btn-primary">
                                 <strong>Login Facebook</strong>
                             </a>
                         </div>
                         @endif
                     </div>
-
                     <a href="/shoppingcart">
-                        <i class="fa fa-shopping-bag fa-2x" aria-hidden="true" style="margin-left: 60%; margin-top: 10px;"></i>
+                        <i class="fa fa-shopping-bag fa-2x" aria-hidden="true" style="margin-left: 80%; margin-top:3%;"><p style="color: pink">({{$soluongsanphamtrongcart}})</p> </i>
                     </a>
-
                 </div>
-
             </div>
-
         </div>
-
         <div class="col-2"></div>
-
     </div>
 
 </header>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light menu">
-
     <a class="navbar-brand" href="/">Trang chủ</a>
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -114,27 +91,23 @@
             @endforeach
             <li class="nav-item">
                 <a class="nav-link" href="#">Giới thiệu</a>
-
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="contact">Liên hệ</a>
             </li>
-{{--            @if($customer->facebook_id == 910332716006384)--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" href="#">Quan tri website</a>--}}
-{{--                </li>--}}
-{{--            @endif--}}
-
-
-
+            @if(Auth::user())
+                @if((Auth::user()->facebook_id==910332716006384))
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Quan tri website</a>
+                </li>
+                @endif
+            @endif
         </ul>
-
         <form class="form-inline my-2 my-lg-0" method="get" action="{{'search'}}">
             <input class="form-control mr-sm-2" type="text" name="key" placeholder="Tìm sản phẩm" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-
     </div>
 
 </nav>

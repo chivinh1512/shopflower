@@ -12,7 +12,16 @@ use App\Billdetail;
 class ProfileController extends Controller
 {
     public function profile(){
-        return view('front_end.page.profile.profile');
+        $facebook_id = Auth::user()->facebook_id;
+        $bill1=Bill::where('facebook_id', $facebook_id)->where('status','1')->get();
+        $bill2=Bill::where('facebook_id', $facebook_id)->where('status','2')->get();
+        $bill3=Bill::where('facebook_id', $facebook_id)->where('status','3')->get();
+        $bill4=Bill::where('facebook_id', $facebook_id)->where('status','4')->get();
+        $stt1=count($bill1);
+        $stt2=count($bill2);
+        $stt3=count($bill3);
+        $stt4=count($bill4);
+        return view('front_end.page.profile.profile',compact('stt1','stt2','stt3','stt4'));
     }
     public function showprofile(){
         return view('front_end.page.profile.showprofile');

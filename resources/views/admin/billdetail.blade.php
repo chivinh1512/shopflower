@@ -23,8 +23,8 @@
                     @endforelse
                 </table>
                 <button>   <a href="admin/billmanager/{{$id}}/2" style="color: green; font-size: 20px">Xác nhận đơn hàng</a></button>
-                <button> <a href="admin/billmanager/{{$id}}/3" style="color: red; font-size: 20px">Hủy đơn hàng</a></td></button>
-                <button> <a href="admin/billmanager/{{$id}}/4" style="color: black; font-size: 20px">Đã giao</a></td></button>
+                <button> <a href="admin/billmanager/{{$id}}/3" style="color: red; font-size: 20px">Đã giao</a></button>
+                <button> <a href="admin/billmanager/{{$id}}/4" style="color: black; font-size: 20px">Đã hủy</a></button>
                 @php
 
                         @endphp

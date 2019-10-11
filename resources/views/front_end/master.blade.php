@@ -15,11 +15,11 @@
             price=$(this).parent().parent().find('.price').html();
             tiencu=$(this).parent().parent().find('.total').html();
             tienmoi=parseInt(price)*parseInt(productqty);
-            gantienmoi=$(this).parent().parent().find('.total').html(tienmoi);
+            gantienmoi=$(this).parent().parent().find('.total').html(tienmoi +'VNĐ');
             tienthaydoi=parseInt(tienmoi)-parseInt(tiencu);
             totalold=$(this).parent().parent().parent().find('.totalall').html();
             totalnew=parseInt(totalold)+parseInt(tienthaydoi);
-            totalnew=$(this).parent().parent().parent().find('.totalall').html(totalnew);
+            totalnew=$(this).parent().parent().parent().find('.totalall').html(totalnew +'VNĐ');
             abc=$('.totalall').html();
             $('.vinh').val(abc);
         });

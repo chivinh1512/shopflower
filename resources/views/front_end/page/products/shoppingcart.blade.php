@@ -6,7 +6,6 @@ $cart = \Session::get('cart');
 ?>
 @if(session('ordered'))
         <div class="alert alert-success" style="text-align: center; margin-left: 35%; font-size: 20px; width: 30%">{{session('ordered')}} </div>
-
 @endif
 <div class="shoppingcart">
         <div class="row">
@@ -14,8 +13,8 @@ $cart = \Session::get('cart');
             <div class="col">
                 <form action="" method="post">
                     @csrf()
-                    @if(\Auth::user())
-                        <input type="hidden" name="facebook_id" value=" {{\Auth::user()->facebook_id}}">
+                    @if(Auth::user())
+                        <input type="hidden" name="facebook_id" value="{{Auth::user()->facebook_id}}">
                     @endif
 
                     @if(isset($cart))
@@ -61,7 +60,7 @@ $cart = \Session::get('cart');
                                                 <tr>
                                                     <td colspan="4" style="text-align: center">Tổng tiền</td>
                                                     <td class="totalall">
-                                                        {{$totalall}}
+                                                        {{$totalall}}VNĐ
                                                     </td>
                                                     <input type="hidden" name="totalall" class="vinh" value="{{$totalall}}">
                                                     <td></td>
@@ -75,12 +74,18 @@ $cart = \Session::get('cart');
 
                         </table>
                         <br>
-
+                        @if(Auth::user())
                         <button class="bt-sm boxproduct" type="submit">Thanh toán</button>
+                        @else
+                                Vui lòng   <a href="{{ url('auth/facebook') }}" class="loginfb">đăng nhập  </a> để thanh toán
+                        @endif
                         <br>
                 </form>
                 @else
-                    <div style="text-align: center">Giỏ hàng trống</div>
+                    <div style="margin-left: 40%;display: inline">Giỏ hàng trống</div>
+                    @if(Auth::user())
+                        <a href="/profile">xem lịch sử đơn hàng</a>
+                    @endif
                 @endif
             </div>
             <div class="col-2"></div>

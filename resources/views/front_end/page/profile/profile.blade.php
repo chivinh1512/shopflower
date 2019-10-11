@@ -18,10 +18,10 @@
                 <a href="/profile/showprofile">Xem thông tin của bạn</a></span>
                 <br><br>
                 <h4>Lịch sử đơn hàng</h4>
-                <a href="/historybill/1">Chờ xác nhận</a>
-                <a href="/historybill/2">Đang giao hàng </a>
-                <a href="/historybill/3">Đã hoàn thành</a>
-                <a href="/historybill/4">Đã hủy</a>
+                <a href="/historybill/1">Chờ xác nhận (<?php echo $stt1;?>) </a> &emsp;
+                <a href="/historybill/2">Đang giao hàng (<?php echo $stt2;?>)</a>&emsp;
+                <a href="/historybill/3">Đã hoàn thành (<?php echo $stt3;?>)</a>&emsp;
+                <a href="/historybill/4">Đã hủy (<?php echo $stt4;?>)</a>&emsp;
             </div>
             <div class="col-2"></div>
         </div>
