@@ -14,7 +14,6 @@
 
 Route::get('/','IndexController@showindex')->name('home');
 
-
 /*Profile*/
 Route::get('/profile','ProfileController@profile');
 Route::get('/profile/showprofile','ProfileController@showprofile');
@@ -23,11 +22,8 @@ Route::get('/historybill/1','ProfileController@show1');
 Route::get('/historybill/2','ProfileController@show2');
 Route::get('/historybill/3','ProfileController@show3');
 Route::get('/historybill/4','ProfileController@show4');
-
 Route::get('/billdetail/{id}','ProfileController@showbilldetail');
-
 Route::post('/billdetail/{id}','ProfileController@editbill');
-Route::get('/billdetail2/{id}','ProfileController@showbilldetail2');
 
 
 Route::get('/products/{id}','ProductController@showproducts')->name('user.products');
@@ -46,25 +42,32 @@ Route::get('/addproducttocart/{id}','ShoppingcartController@addproducttocart');
 Route::get('/delproductincart','ShoppingcartController@delproductincart');
 Route::get('/shoppingcart','ShoppingCartController@showcart');
 Route::post('/shoppingcart','ShoppingCartController@postbill');
-
-/*Admin Controller*/
-Route::get('/admin','AdminController@admin');
-
-/*Category manager*/
-Route::get('/admin/categorymanager','CategoryManagerController@showcategories');
-Route::get('/admin/categorymanager/delete/{id}','CategoryManagerController@delete');
-Route::post('/admin/categorymanager','CategoryManagerController@postcategories');
-Route::get('/admin/categorymanager/edit/{id}','CategoryManagerController@geteditcategory');
-Route::post('/admin/categorymanager/edit/{id}','CategoryManagerController@postedit');
-
-/*Product manager*/
-Route::get('/admin/productmanager','ProductManagerController@showproducts');
-Route::get('/admin/productmanager/delete/{id}','ProductManagerController@delete');
-Route::post('/admin/productmanager','ProductManagerController@postproducts');
-Route::get('/admin/productmanager/edit/{id}','ProductManagerController@geteditproduct');
-Route::post('/admin/productmanager/edit/{id}','ProductManagerController@postedit');
-
-/*Bill manager*/
-Route::get('/admin/billmanager','BillManagerController@showbills');
-Route::get('/admin/billmanager/{id}','BillManagerController@getbilldetail');
-Route::get('/admin/billmanager/{id}/{status}','BillManagerController@editstatus');
+        /*Admin Controller*/
+Route::middleware('level')->group(function () {
+    Route::get('/admin', 'AdminController@admin');
+    /*Category manager*/
+    Route::get('/admin/categorymanager', 'CategoryManagerController@showcategories');
+    Route::get('/admin/categorymanager/delete/{id}', 'CategoryManagerController@delete');
+    Route::post('/admin/categorymanager', 'CategoryManagerController@postcategories');
+    Route::get('/admin/categorymanager/edit/{id}', 'CategoryManagerController@geteditcategory');
+    Route::post('/admin/categorymanager/edit/{id}', 'CategoryManagerController@postedit');
+    /*Product manager*/
+    Route::get('/admin/productmanager', 'ProductManagerController@showproducts');
+    Route::get('/admin/productmanager/delete/{id}', 'ProductManagerController@delete');
+    Route::post('/admin/productmanager', 'ProductManagerController@postproducts');
+    Route::get('/admin/productmanager/edit/{id}', 'ProductManagerController@geteditproduct');
+    Route::post('/admin/productmanager/edit/{id}', 'ProductManagerController@postedit');
+    /*Bill manager*/
+    Route::get('/admin/billmanager', 'BillManagerController@showbills');
+    Route::get('/admin/billmanager/{id}', 'BillManagerController@getbilldetail');
+    Route::get('/admin/billmanager/{id}/{status}', 'BillManagerController@editstatus');
+    /*User manager*/
+    Route::get('/admin/usermanager', 'UserManagerController@showusers');
+    /*Banner manager*/
+    Route::get('/admin/bannermanager','BannerManagerController@showbanners');
+    Route::post('/admin/bannermanager','BannerManagerController@postbanners');
+    Route::get('/admin/bannermanager/delete/{id}','BannerManagerController@delete');
+    /*Contact manager*/
+    Route::get('/admin/contactmanager','ContactManagerController@showcontacts');
+    Route::get('/admin/contactmanager/delete/{id}','ContactManagerController@delete');
+});

@@ -4,7 +4,6 @@
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -285,7 +284,7 @@
                 <div class="col-2"></div>
                 <div class="col">
                     <H2 style="display: inline">{{$key}} </H2>
-                            <a href="/products/{{$value[0]->id_cate}}"><h4 style="text-align: right; margin-right: 15%">Xem thêm</h4></a>
+                    <a href="/products/{{$value[0]->id_cate}}"><h4 style="text-align: right; margin-right: 15%">Xem thêm</h4></a>
                     <hr class="short">
                     <br>
                     <div class="row">

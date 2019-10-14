@@ -18,6 +18,15 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/admin/billmanager">Quản lý đơn hàng</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/usermanager">Quản lý user</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/bannermanager">Quản lý banner</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/contactmanager">Quản lý contact</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>

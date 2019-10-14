@@ -27,8 +27,13 @@
          logged_out_greeting="Xin chào ! Chúng tôi đã sẵn sàng tư vấn hỗ trợ">
     </div>
     <?php
-    $cart = Session::get('cart');
-    $soluongsanphamtrongcart=count($cart);
+    if (Session::get('cart')==null){
+        $soluongsanphamtrongcart='0';
+    }
+    else{
+        $cart = Session::get('cart');
+        $soluongsanphamtrongcart=count($cart);
+    }
     ?>
     <div class="row">
         <div class="col-2"></div>
@@ -99,7 +104,7 @@
             @if(Auth::user())
                 @if((Auth::user()->facebook_id==910332716006384))
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Quan tri website</a>
+                    <a class="nav-link" href="/admin">Quan tri website</a>
                 </li>
                 @endif
             @endif

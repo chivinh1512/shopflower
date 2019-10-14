@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableBillsTable extends Migration
+class CreateTableCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateTableBillsTable extends Migration
      */
     public function up()
     {
-        Schema::create('bills', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->increments('id')->unsigned();
-            $table->string('facebook_id');
-            $table->string('note')->nullable();
-            $table->integer('status');
-            $table->integer('total');
+            $table->string('name');
+            $table->string('img');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateTableBillsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bills');
+        Schema::dropIfExists('categories');
     }
 }

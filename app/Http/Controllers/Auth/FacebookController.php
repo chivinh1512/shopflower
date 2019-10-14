@@ -33,13 +33,14 @@ class FacebookController extends Controller
             $user = Socialite::driver('facebook')->user();
             $create['name'] = $user->getName();
             $create['email'] = $user->getEmail();
+            $create['avatar'] = $user->getAvatar();
             $create['facebook_id'] = $user->getId();
             $userModel = new User;
             $createdUser = $userModel->addNew($create);
             Auth::loginUsingId($createdUser->id);
             $category['user']=$create;
 
-            return view('front_end.page.home.home' , $category );
+            return redirect()->to('');
 
         } catch (Exception $e) {
 

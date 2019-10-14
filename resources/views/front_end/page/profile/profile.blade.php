@@ -6,14 +6,9 @@
             <div class="col-2"></div>
             <div class="col">
                 <h4>Quản lý tài khoản</h4>
-
                  {{Auth::user()->name}}
-                @if(empty(Auth::user()->avatar))
-                    <img class="pull-left" src="source/img/avatar/aq.png" width="80px" height="80px">
-                @endif
-                @if(Auth::user()->avatar)
-                    <img class="pull-left" src="source/img/avatar/{{Auth::user()->avatar}}" width="80px" height="80px">
-                @endif
+                <br>
+                    <img src="{{Auth::user()->avatar}}" width="10%">
                 <br>
                 <a href="/profile/showprofile">Xem thông tin của bạn</a></span>
                 <br><br>
