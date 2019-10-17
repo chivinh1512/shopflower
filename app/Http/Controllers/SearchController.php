@@ -11,6 +11,6 @@ class SearchController extends Controller
         $products = Product::where('name','like','%'.$req->key.'%')
             ->orWhere('price',$req->key)
             ->get();
-        return view('front_end.page.products.search',compact('products', 'name'));
+        return view('front_end.page.products.search',compact('products'));
     }
 }

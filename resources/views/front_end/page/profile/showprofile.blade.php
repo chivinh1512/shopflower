@@ -10,7 +10,7 @@
                 <form action="" method="post">
                     @csrf()
                     <div class="row">
-                        <div class="col-md-4" style="margin-left: 10%">
+                        <div class="col-md-4">
                         <img src="{{\Auth::user()->avatar}}" width="80%">
 
                         </div>

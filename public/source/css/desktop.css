@@ -185,6 +185,11 @@ hr.vrshort{
     font-size: 10px;
     margin-left:50px;
 }
+.fa-shopping-bag:hover{
+    color: pink;
+    opacity: 0.8;
+    transition: 2s;
+}
 .pdname{
     text-align: left;
     margin-left:50px;
@@ -216,6 +221,8 @@ html {
 }
 .add-to-cart:hover{
     color: pink;
+    margin-left: 2%;
+    transition: 0.7s;
 }
 hr.st{
     width: 20%;
@@ -272,4 +279,10 @@ a button.bt{
 }
 .bt-sm:hover{
     background-color: #ccc;
+}
+.btn-solid:hover{
+    background-position:100%;
+    color:red;
+    background-color:black;
+    transition: 1.5s;
 }

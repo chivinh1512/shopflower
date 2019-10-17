@@ -40,7 +40,7 @@
         <div class="col-8">
             <div class="row">
                 <div class="col-xl-4">
-                    <a href="https://www.facebook.com/saigonroses/">
+                    <a href="https://www.facebook.com/Shop-hoa-tươi-Sài-Gòn-112031363539575">
                         <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
                     </a>
                     <a href="">
@@ -68,7 +68,7 @@
                         @endif
                     </div>
                     <a href="/shoppingcart">
-                        <i class="fa fa-shopping-bag fa-2x" aria-hidden="true" style="margin-left: 80%; margin-top:3%;"><p style="color: pink">({{$soluongsanphamtrongcart}})</p> </i>
+                        <i class="fa fa-shopping-bag fa-2x" title="Xem giỏ hàng" aria-hidden="true" style="margin-left: 80%; margin-top:3%;"><p style="color: pink">({{$soluongsanphamtrongcart}})</p> </i>
                     </a>
                 </div>
             </div>
@@ -111,7 +111,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0" method="get" action="{{'search'}}">
             <input class="form-control mr-sm-2" type="text" name="key" placeholder="Tìm sản phẩm" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-solid btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
 
