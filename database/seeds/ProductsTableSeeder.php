@@ -12,7 +12,7 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
         DB::table('products')->insert([
-            ['name' => 'Trao yêu thương A01', 'img' => 'bo-hoa-tuoi-happy-flower-E04-1-247x296.jpg', 'price' => '50000', 'id_cate' => '1', 'detail' => '10 hoa hồng' ],
+            ['name' => 'Trao yêu thương A01', 'img' => 'bo-hoa-tuoi-happy-flower-E04-1-247x296.jpg', 'price' => '50000', 'id_cate' => '1', 'detail' => 'Tình yêu đến khẽ như một cơn gió sớm mai với những tia nắng ngọt ngào và ấm áp. Ai đó đã từng nói rằng thật tội nghiệp cho những kẻ chưa từng được yêu. Khi thì nồng nàn và khi thì sâu lắng tạo nên những dư vị tuyệt vời của tình yêu.' ],
             ['name' => 'Trao yêu thương A02', 'img' => 'bo-hoa-tuoi-happy-e01-247x296.jpg', 'price' => '40000', 'id_cate' => '1', 'detail' => '10 hoa hồng' ],
             ['name' => 'Trao yêu thương A03', 'img' => 'bo-hoa-tuoi-happy-flower-E16-1-247x296.jpg', 'price' => '25000', 'id_cate' => '1', 'detail' => '10 hoa hồng' ],
             ['name' => 'Trao yêu thương A04', 'img' => 'bo-hoa-tuoi-happy-flower-E12-247x296.jpg', 'price' => '30000', 'id_cate' => '1', 'detail' => '10 hoa hồng' ],

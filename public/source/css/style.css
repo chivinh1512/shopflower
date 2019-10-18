@@ -13,7 +13,7 @@ a:hover{
     text-decoration: none;
 }
 header{
-    height: 200px;
+    height: auto;
 }
 .boxproduct {
     transition: all 0.8s ease;
@@ -87,7 +87,7 @@ header{
     background-color: #2B5973;
 }
 .bggray{
-    height: 750px;
+    height: auto;
     background-color: #F5F5F5;
     color: #2B5973;
 }
@@ -123,7 +123,7 @@ header{
     margin-left: 30%;
 }
 .bgwhite{
-    height: 400px;
+    height: auto;
     background: #FEDCE2;
 }
 .col .slogan{
@@ -173,7 +173,7 @@ p.namepd{
 }
 footer{
     background: #FEDCE2;
-    height: 500px;
+    height: auto;
 }
 hr.ft{
     width: 70%;
@@ -233,7 +233,7 @@ hr.st{
 .pd-img:hover{
     opacity: 0.8;
 }
-.col-3 ul {
+ul {
     list-style: none;
 }
 .col-3 ul li a{
@@ -251,7 +251,7 @@ hr.st{
 }
 .nameprod{
     text-align: center;
-    color: pink;
+    color: black;
 }
 .priceprod{
     text-align: center;
@@ -285,4 +285,44 @@ a button.bt{
     color:red;
     background-color:black;
     transition: 1.5s;
+}
+ul{
+    list-style-type: none;
+}
+.vvv{
+    color: #ccc;
+}
+.vvv:hover{
+    color: pink;
+    padding-left: 20%;
+    transition: 0.8s;
+}
+.bb{
+    text-align: center;
+    height: auto;
+}
+.a3{
+    color: red;
+}
+.a3:hover{
+    color: black;
+    margin-left: 10%;
+    transition: 1s;
+}
+.even{
+    background: e7ffe2;
+    border: 1px solid #b1dab3;
+    color: #189001;
+    -webkit-border-radius: 10px;
+}
+.sub_desc{
+    width: 380px;
+    background: e7ffe2;
+    position: relative;
+    display: block;
+    float: left;
+    font-size: 14px;
+    clear: both;
+    margin-bottom: 10px;
+    padding: 10px 10px;
 }
