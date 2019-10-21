@@ -37,7 +37,7 @@
     ?>
     <div class="container">
         <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4" style="border: 1px solid">
                             <a href="https://www.facebook.com/Shop-hoa-tươi-Sài-Gòn-112031363539575">
                                 <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
                             </a>
@@ -48,10 +48,10 @@
                                 <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
                             </a>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4" style="border: 1px solid">
                             <img src="source/img/logo/logo.jpg" alt="">
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4" style="border: 1px solid">
                             <br>
                                 @if(Auth::user())
                                     <div style="margin: 0px 0px 0px 35%"> <a href="/profile"> Xin chào : {{Auth::user()->name}}</a></div>
@@ -73,7 +73,6 @@
 <br>
 <div class="container">
     <div class="row">
-        <div class="col-lg-2"></div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light menu">
                 <a class="navbar-brand" href="/">Trang chủ</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -111,6 +110,5 @@
                     </form>
                 </div>
             </nav>
-        <div class="col-lg-2"></div>
     </div>
 </div>

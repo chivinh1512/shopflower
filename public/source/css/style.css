@@ -8,6 +8,7 @@ html, body{
     height: 100%;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-repeat: repeat;
 }
 a:hover{
     text-decoration: none;
@@ -65,9 +66,8 @@ header{
     color: #2B5973
 }
 .menu{
-    padding-left: 20%;
-    padding-right: 20%;
-    background-color: pink ! important;
+    background-image: url("../img/bg/bg-special.png");
+    width: 100%;
 }
 .col .section-title{
     position: relative;
@@ -282,7 +282,7 @@ a button.bt{
 }
 .btn-solid:hover{
     background-position:100%;
-    color:red;
+    color:pink;
     background-color:black;
     transition: 1.5s;
 }
@@ -310,19 +310,46 @@ ul{
     transition: 1s;
 }
 .even{
-    background: e7ffe2;
     border: 1px solid #b1dab3;
     color: #189001;
     -webkit-border-radius: 10px;
 }
 .sub_desc{
-    width: 380px;
-    background: e7ffe2;
+    width: auto;
+    background: #e7ffe2;
     position: relative;
     display: block;
     float: left;
     font-size: 14px;
     clear: both;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 10px 10px;
+}
+.rowcate{
+    background-image: url("../img/bg/bg-special.png");
+}
+.benefit{
+    font-size: 14px;
+}
+.orange{
+    width: auto;
+    background: #fffcd9;
+    font-size: 14px;
+    clear: both;
+    margin-bottom: 5px;
+    padding: 10px 10px;
+    border: 1px solid #b1dab3;
+    color: #f26922;
+    -webkit-border-radius: 10px;
+}
+.rowpro{
+    color: #ccc;
+    font-size: 15px;
+}
+.rowpro:hover{
+    color: pink;
+    margin-left: 20px;
+    font-size: 19px;
+    transition: 1s;
+    box-shadow: 0px 0px 20px;
 }

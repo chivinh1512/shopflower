@@ -74,10 +74,10 @@
     </div>
         <br>
         <div class="container" style="height: auto">
-            <div class="row" style="background: #ccc">
+            <div class="row rowcate">
                             @isset($categories)
                                 @foreach ($categories as $cate)
-                                    <div class="col-lg-3" style="text-align: center">
+                                    <div class="col-lg-3" style="text-align: center;">
                                             <a  href="products/{{$cate->id}}" class="a3"> <img src="source/img/categories/{{$cate->img}}" style="border-radius: 50%; width: 80%"><br>
                                                 <span> {{$cate->name}}</span>
                                             </a>
@@ -186,39 +186,41 @@
     <br>
     @isset($abc)
         @foreach($abc as $key => $value)
+        <div class="container">
             <div class="row">
-                <div class="col-2"></div>
                 <div class="col">
                     <H2 style="display: inline">{{$key}} </H2>
                     <a href="/products/{{$value[0]->id_cate}}"><h4 style="text-align: right; margin-right: 15%">Xem thêm</h4></a>
                     <hr class="short">
                     <br>
-                    <div class="row">
-                        @if($value != null)
-                            @forelse($value as $va)
-                                <div class="col-3 boxproduct">
-                                    <div class="boxpd">
-                                        <a href="/productdetail/{{$va->id}}">
-                                            <div class="imgprod">
-                                                <img src="source/img/products/{{$va->img}}" width="70%" height="80%" style="margin-left: 15%">
-                                            </div>
-                                            <div class="nameprod">
-                                                {{$va->name}}
-                                            </div>
-                                            <div class="priceprod">
-                                                {{$va->price}} VNĐ
-                                            </div>
-                                        </a>
+                    <div class="container">
+                        <div class="row">
+                            @if($value != null)
+                                @forelse($value as $va)
+                                    <div class="col-lg-3 boxproduct">
+                                        <div class="boxpd">
+                                            <a href="/productdetail/{{$va->id}}">
+                                                <div class="imgprod">
+                                                    <img src="source/img/products/{{$va->img}}" width="70%" height="80%" style="margin-left: 15%">
+                                                </div>
+                                                <div class="nameprod">
+                                                    {{$va->name}}
+                                                </div>
+                                                <div class="priceprod">
+                                                    {{$va->price}} VNĐ
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            @empty
-                                <div style="padding-left: 30px">Không có kết quả</div>
-                            @endforelse
-                        @endif
+                                @empty
+                                    <div style="padding-left: 30px">Không có kết quả</div>
+                                @endforelse
+                            @endif
+                        </div>
                     </div>
                 </div>
-                <div class="col-2"></div>
             </div>
+        </div>
         @endforeach
     @endisset
 @endsection
