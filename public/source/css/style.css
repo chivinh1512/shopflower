@@ -187,6 +187,7 @@ hr.vrshort{
 }
 .fa-shopping-bag:hover{
     color: pink;
+
     opacity: 0.8;
     transition: 2s;
 }
@@ -221,7 +222,7 @@ html {
 }
 .add-to-cart:hover{
     color: pink;
-    margin-left: 2%;
+    margin-left: 5%;
     transition: 0.7s;
 }
 hr.st{
@@ -302,11 +303,11 @@ ul{
     height: auto;
 }
 .a3{
-    color: red;
+    color: #ccc;
 }
 .a3:hover{
     color: black;
-    margin-left: 10%;
+    margin-top: 30px;
     transition: 1s;
 }
 .even{
@@ -352,4 +353,20 @@ ul{
     font-size: 19px;
     transition: 1s;
     box-shadow: 0px 0px 20px;
+}
+.line{
+    background-image: url("../img/hinhle/line.png");
+    background-repeat: repeat-x;
+    background-position: left center;
+    display: block;
+    position: relative;
+    clear: both;
+    height: 2px;
+    padding: 12px 0px;
+}
+.underslide{
+    background-color: #d4e9ff;
+}
+.imgcate:hover{
+   margin-top: 20px;
 }

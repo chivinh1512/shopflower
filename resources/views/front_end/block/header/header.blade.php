@@ -37,7 +37,7 @@
     ?>
     <div class="container">
         <div class="row">
-                        <div class="col-lg-4" style="border: 1px solid">
+                        <div class="col-lg-4">
                             <a href="https://www.facebook.com/Shop-hoa-tươi-Sài-Gòn-112031363539575">
                                 <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
                             </a>
@@ -48,10 +48,10 @@
                                 <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
                             </a>
                         </div>
-                        <div class="col-lg-4" style="border: 1px solid">
+                        <div class="col-lg-4">
                             <img src="source/img/logo/logo.jpg" alt="">
                         </div>
-                        <div class="col-lg-4" style="border: 1px solid">
+                        <div class="col-lg-4">
                             <br>
                                 @if(Auth::user())
                                     <div style="margin: 0px 0px 0px 35%"> <a href="/profile"> Xin chào : {{Auth::user()->name}}</a></div>
@@ -99,7 +99,7 @@
                         @if(Auth::user())
                             @if((Auth::user()->facebook_id==910332716006384))
                             <li class="nav-item">
-                                <a class="nav-link" href="/admin">Quan tri website</a>
+                                <a class="nav-link" href="/admin">Quản trị website</a>
                             </li>
                             @endif
                         @endif

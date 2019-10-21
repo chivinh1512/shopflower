@@ -6,7 +6,7 @@
             <div class="col-lg-4" style="border: solid 1px">
                 <H5 style="color: #ccc">DỊCH VỤ GIAO HOA</H5>
                 <H5 style="color: pink">63 TỈNH THÀNH</H5>
-                <p style="text-align: left">Hoayeuthuong.com luôn cam kết đặt chất lượng hoa luôn tươi mới lên hàng đầu giao cho khách.
+                <p style="text-align: left">Shop hoa tươi luôn cam kết đặt chất lượng hoa luôn tươi mới lên hàng đầu giao cho khách.
                     Các mẫu hoa luôn được cắm đủ số lượng và giống kiểu dáng trên website nhất có thể.</p>
                 <div style="border-bottom:dashed 1px;"></div><br>
                 <h6 style="color: pink">DANH MỤC HOA TƯƠI</h6><br>
@@ -48,16 +48,23 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+                <div class="underslide">
+                    <br>
+                    <a href=""><img src="source/img/hinhle/hoa-cao-cap.png" width="90%" height="90%" style="margin-left: 5%; margin-bottom: 20px"></a>
+                    <div class="line"></div>
+                    <p style="border-radius: 8%;width: 90%;margin: auto;">Không có một nơi nào tốt hơn để bạn lựa chọn cho một dịch vụ điện hoa chuyên nghiệp ngoài Shop của chúng tôi.
+                         Ngoài các dịch vụ hoa tươi, hiểu được thêm nhu cầu của bạn, chúng tôi có liên kết với các hãng có uy tín để cung cấp thêm các dịch vụ như: Bánh sinh nhật, Chocolate, Gấu bông, kẹo ngọt, trái cây...</p>
+                </div>
             </div>
-
         </div>
-        <hr>
+        <div class="line"></div>
     </div>
         <div class="container">
             <div class="row" style="background: pink">
                 <div class="col-lg-4"><hr></div>
                 <div class="col-lg-4">
                     <h4 style="color: black">
+                        <img src="source/img/hinhle/icon-hyt.png">
                         Các loại hoa mới nhất
                     </h4>
                 </div>
@@ -77,8 +84,8 @@
             <div class="row rowcate">
                             @isset($categories)
                                 @foreach ($categories as $cate)
-                                    <div class="col-lg-3" style="text-align: center;">
-                                            <a  href="products/{{$cate->id}}" class="a3"> <img src="source/img/categories/{{$cate->img}}" style="border-radius: 50%; width: 80%"><br>
+                                    <div class="col-lg-3" style="text-align: center; height: 300px">
+                                            <a href="products/{{$cate->id}}" class="a3"> <img class="imgcate" src="source/img/categories/{{$cate->img}}" style="width: 80%;margin-top: 50px"><br>
                                                 <span> {{$cate->name}}</span>
                                             </a>
                                     </div>

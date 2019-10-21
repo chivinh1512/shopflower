@@ -11,22 +11,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <div style="border: 1px dashed "><img src="source/img/products/{{$productdetail->img}}" title="bo-hoa-tuoi-happy-e01-247x296"
+                    <div style="border: 1px dotted "><img src="source/img/products/{{$productdetail->img}}" title="bo-hoa-tuoi-happy-e01-247x296"
                               width="80%" style="margin:10% 10%"><br></div>
-                    <div style="border: 1px dashed;border-top: none">
-                      <div style="text-align: center">  Mã SP: {{$productdetail->id}}</div><hr>
+                    <div style="border: 1px dotted;border-top: none">
+                      <div style="text-align: center">  Mã SP: {{$productdetail->id}}</div>
+                        <div class="line">
+                        </div>
                         <a class="add-to-cart" href="/addproducttocart/{{$productdetail->id}}"><i
                                 class="fa fa-shopping-cart fa-2x" title="cho vào giỏ hàng" style="margin:0% 45%"></i></a></div>
 
                 </div>
                 <div class="col-lg-4">
                     <h5>{{$productdetail->name}}</h5>
-                    <hr>
+                    <div class="line"></div>
                 <div style="font-size: 14px"> {{$productdetail->detail}}</div>
                     <div class="sub_desc even">
                         <h5>Lưu ý: Sản phẩm chỉ có ở Hồ Chí Minh và Hà Nội</h5>
                         <p>Sản phẩm bạn đang chọn là sản phẩm được thiết kế đặc biệt!</p>
-                        <p>Hiện nay, Hoayeuthuong.com chỉ thử nghiệm cung cấp cho thị trường <strong>Tp. Hồ Chí Minh và
+                        <p>Hiện nay, Shop chỉ thử nghiệm cung cấp cho thị trường <strong>Tp. Hồ Chí Minh và
                                 Tp. Hà Nội</strong></p>
                     </div>
                     <div class="sub_desc even orange">
@@ -40,8 +42,10 @@
                     </ul>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <img src="source/img/hinhle/dat-hoa-so-luong-lon.png" width="80%" style="padding-left: 3%"><br>
+                <div class="col-lg-4" style="background: #d4e9ff; width: 10%">
+                    <img src="source/img/hinhle/dat-hoa-so-luong-lon.png" width="100%" style="margin: auto"><br>
+                    <div class="line">
+                    </div>
                 </div>
             </div>
         </div>

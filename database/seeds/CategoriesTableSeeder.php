@@ -12,10 +12,10 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-           ['name' => 'Bó hoa tươi', 'img' => 'bohoatuoi.jpg'],
-            ['name' => 'Giỏ hoa tươi', 'img' => 'giohoatuoi.jpg'],
-            ['name' => 'Hoa chúc mừng', 'img' => 'hoachucmung.jpg'],
-            ['name' => 'Hoa chia buồn', 'img' => 'hoachiabuon.jpg'],
+           ['name' => 'Bó hoa tươi', 'img' => 'bohoatuoi.png'],
+            ['name' => 'Giỏ hoa tươi', 'img' => 'giohoatuoi.png'],
+            ['name' => 'Hoa chúc mừng', 'img' => 'hoachucmung.png'],
+            ['name' => 'Hoa chia buồn', 'img' => 'hoachiabuon.png'],
         ]);
     }
 }

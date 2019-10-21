@@ -19,10 +19,9 @@
             </div>
             <div class="col-lg-4">
                 <hr class="ft">
-                Giờ làm việc
+                Uy tín công ty
                 <hr class="ft">
-                <p>Thứ 2 đến thứ 6 : 7h30 --> 17h30</p>
-                <p>Cuối tuần : 8h30 --> 13h30</p>
+                <p>Vui lòng khách đến, vừa lòng khách đi</p>
             </div>
         </div>
     </div>
